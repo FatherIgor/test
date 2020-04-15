@@ -73,8 +73,9 @@ public class LinkedTaskList extends AbstractTaskList {
         Task[] newArr = new Task[size()];
         int index = 0;
         Link a = head;
+        //System.out.println(a.task.nextTimeAfter(from) == -1);
         while (a != null) {
-            a.task.setActive(true);
+            //a.task.setActive(true);
             if (a.task.nextTimeAfter(from) != -1 && a.task.nextTimeAfter(from) <= to) {
                 newArr[index] = a.task;
                 index++;
